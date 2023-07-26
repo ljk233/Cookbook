@@ -1,15 +1,18 @@
+"""Return the five-number summary of some data by calling the describe method."""
+
 # %%
 import pandas as pd
 from scipy.stats import binom
 
 
-def five_number_summary(df: pd.DataFrame, col: str) -> pd.DataFrame:
-    """Return the five-number summary of some data."""
-    return df[[col]].describe().T[["min", "25%", "50%", "75%", "max"]]
+# Examples
+# ========
+df = pd.DataFrame({"x": binom(20, 0.6).rvs(50), "y": binom(20, 0.45).rvs(50)})
 
+# One variable
+# ============
+df.describe()
 
-# Example
-# =======
-pd.DataFrame({"x": binom(20, 0.6).rvs(100)}).pipe(five_number_summary, "x")
-
-# %%
+# Multiple variables
+# ==================
+df.melt().groupby("variable").describe()
