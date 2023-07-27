@@ -12,4 +12,4 @@ desc_map = {"mean": rv.mean(), "std": rv.std()}
 desc_map.update({f"q-{q}": rv.ppf(q) for q in [0.01, 0.25, 0.5, 0.75, 0.99]})
 
 # Return the description as a pandas Series
-pd.Series(desc_map, name="description")
+desc_se = pd.Series(desc_map, name="description")
