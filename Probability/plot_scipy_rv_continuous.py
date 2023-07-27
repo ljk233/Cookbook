@@ -1,8 +1,4 @@
-"""Plot a SciPy continuous random variable.
-
-1. Generate the domain
-2. Initialise a pandas DataFrame and pipe it into sns.relplot
-"""
+"""Plot a SciPy continuous random variable."""
 
 # %%
 import numpy as np
