@@ -1,22 +1,37 @@
 """Summarising a single categorical variable."""
 
-# %%
+# %% Import dependencies
 import pandas as pd
 import seaborn as sns
 import statsmodels.api as sm
 
+
+sns.set_theme()
+
 # %% Cache the data
-smoke_ban = sm.datasets.get_rdataset("SmokeBan", "AER", cache=True)
-smoker_se: pd.Series = smoke_ban.data["smoker"]
+X: pd.DataFrame = sm.datasets.get_rdataset("SmokeBan", "AER", cache=True).data
 
-# %%  Counts
-smoker_se.value_counts()
+# ======================================================================
+# Numeric summaries
+# ======================================================================
 
-# %%  Proportions
-smoker_se.value_counts(normalize=True)
+# %% Counts
+X["smoker"].value_counts()
+
+# %% Proportions
+X["smoker"].value_counts(normalize=True)
 
 # %% Percentages
-smoker_se.value_counts(normalize=True) * 100
+X["smoker"].value_counts(normalize=True).mul(100).rename("percentage")
 
-# %% Visuable the aggregation
-sns.countplot(x=smoker_se)
+# ======================================================================
+# Visualisations
+# ======================================================================
+
+# %% Simple bar plot (y=count)
+sns.countplot(x=X)
+
+# %% Simple bar plot (y=proportion)
+X[["smoker"]].value_counts(normalize=True).reset_index().pipe(
+    sns.catplot, x="smoker", y="proportion", kind="bar"
+)
