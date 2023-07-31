@@ -14,4 +14,4 @@ X: pd.Series = sm.datasets.get_rdataset("Bwages", "Ecdat").data["wage"]
 # Return the median
 # ======================================================================
 
-X.quantile(0.5)
+X.median()
