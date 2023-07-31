@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
+
 # ======================================================================
 # Get things ready
 # ======================================================================
@@ -12,7 +13,7 @@ import statsmodels.api as sm
 X: pd.Series = sm.datasets.get_rdataset("Bwages", "Ecdat").data["wage"]
 
 # ======================================================================
-# Return the Nth percentile
+# Return the deciles
 # ======================================================================
 
 X.quantile(np.linspace(0.1, 1, num=10)).rename("deciles")
