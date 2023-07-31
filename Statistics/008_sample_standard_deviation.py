@@ -11,7 +11,7 @@ import statsmodels.api as sm
 X: pd.Series = sm.datasets.get_rdataset("Bwages", "Ecdat").data["wage"]
 
 # ======================================================================
-# Return the standard deviation
+# Return the sample standard deviation
 # ======================================================================
 
 X.std(ddof=1)
