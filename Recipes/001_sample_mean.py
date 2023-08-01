@@ -3,7 +3,7 @@
 #
 # ## Theory
 #
-# The **sample mean** is the value that minimises the sum of the deviations.
+# The **sample mean** is the value that minimises the sum of the squared deviations.
 #
 # ## Recipe
 #
