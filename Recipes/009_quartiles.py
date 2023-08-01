@@ -1,15 +1,16 @@
 # %% [markdown]
-# # Sample mean
+# # Quartiles
 #
 # ## Theory
 #
-# The **sample mean** is the value that minimises the sum of the squared deviations.
+# The **quartiles** are the three values that separate a sample into four even parts.
 #
 # ## Recipe
 #
 # Load the dependencies.
 
 # %%
+import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
@@ -20,7 +21,7 @@ import statsmodels.api as sm
 X: pd.Series = sm.datasets.get_rdataset("Bwages", "Ecdat").data["wage"]
 
 # %% [markdown]
-# Return the sample mean.
+# Return the sample quartiles.
 
 # %%
-X.mean()
+X.quantile(np.linspace(0.25, 1, num=4)).rename("quartiles")

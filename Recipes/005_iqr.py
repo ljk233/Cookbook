@@ -3,7 +3,7 @@
 #
 # ## Theory
 #
-# The **sample interquartile-range** is difference between the first and the third quartiles.
+# The **interquartile-range** (IQR) is difference between the first and the third quartiles.
 #
 # ## Recipe
 #

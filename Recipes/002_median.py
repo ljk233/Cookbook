@@ -1,9 +1,9 @@
 # %% [markdown]
-# # Sample median
+# # Median
 #
 # ## Theory
 #
-# The **sample mediann** is the value that minimises the sum of absolute deviations.
+# The **median** is the value that minimises the sum of absolute deviations.
 #
 # ## Recipe
 #

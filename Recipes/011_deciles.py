@@ -1,9 +1,9 @@
 # %% [markdown]
-# # Sample deciles
+# # Deciles
 #
 # ## Theory
 #
-# The **sample deciles** are the nine values that separate a sample into 10 even parts.
+# The **deciles** are the nine values that separate a sample into 10 even parts.
 #
 # ## Recipe
 #

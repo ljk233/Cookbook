@@ -1,9 +1,9 @@
 # %% [markdown]
-# # Sample mode
+# # Mode
 #
 # ## Theory
 #
-# The **sample mode** is the value of the observation that has the highest frequency.
+# The **mode** is the value of the observation that has the highest frequency.
 #
 # ## Recipe
 #

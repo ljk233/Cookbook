@@ -1,16 +1,17 @@
 # %% [markdown]
-# # Sample range
+# # *N*th percentile
 #
 # ## Theory
 #
-# The **sample range** is the difference between the highest observed value and the lowest observed value.
+# The ***n*th percentile** is the value *p* such that *n*% of the
+# observations are lower and (100 - *n*)% of the observations are
+# greater than *p*.
 #
 # ## Recipe
 #
 # Load the dependencies.
 
 # %%
-import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
@@ -21,6 +22,7 @@ import statsmodels.api as sm
 X: pd.Series = sm.datasets.get_rdataset("Bwages", "Ecdat").data["wage"]
 
 # %% [markdown]
-# Return the sample range.
+# Return *q*-0.05.
 
-np.ptp(X)
+# %%
+X.quantile(0.05)

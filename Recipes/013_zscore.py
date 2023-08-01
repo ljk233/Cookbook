@@ -1,17 +1,18 @@
 # %% [markdown]
-# # Sample quintiles
+# # Sample *z*-scores
 #
 # ## Theory
 #
-# The **sample quintiles** are the four values that separate a sample into five even parts.
+# The ***z*-score** is the number of standard deviations a value is away
+# from the *sample mean*.
 #
 # ## Recipe
 #
 # Load the dependencies.
 
 # %%
-import numpy as np
 import pandas as pd
+from scipy import stats as st
 import statsmodels.api as sm
 
 # %% [markdown]
@@ -21,7 +22,7 @@ import statsmodels.api as sm
 X: pd.Series = sm.datasets.get_rdataset("Bwages", "Ecdat").data["wage"]
 
 # %% [markdown]
-# Return the sample quartiles.
+# Return the sample *z*-scores.
 
 # %%
-X.quantile(np.linspace(0.2, 1, num=5)).rename("quintiles")
+pd.Series(st.zscore(X), name="zscore")

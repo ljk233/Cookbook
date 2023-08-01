@@ -1,9 +1,10 @@
 # %% [markdown]
-# # Sample fences
+# # Fences
 #
 # ## Theory
 #
-# The upper and lower **sample fences** represent the cut-off values for upper and lower outliers.
+# The upper and lower **fences** represent the cut-off values for upper
+# and lower outliers.
 #
 # ## Recipe
 #
