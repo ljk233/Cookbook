@@ -3,7 +3,7 @@
 #
 # ## Theory
 #
-# The sample *z*-score is the number of standard deviations a value is away from the *sample mean*.
+# The **sample *z*-score** is the number of standard deviations a value is away from the *sample mean*.
 #
 # ## Recipe
 #
