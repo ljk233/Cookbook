@@ -3,7 +3,9 @@
 #
 # ## Theory
 #
-# The ***n*th sample percentile** is the value *p* such that *n*% of the observations are lower and (100 - *n*)% of the observations are greater than *p*.
+# The ***n*th sample percentile** is the value *p* such that *n*% of the
+# observations are lower and (100 - *n*)% of the observations are
+# greater than *p*.
 #
 # ## Recipe
 #
