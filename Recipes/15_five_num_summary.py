@@ -3,17 +3,9 @@
 #
 # ## Theory
 #
-# [The] five-number summary simply consists of the smallest data value,
-# the first quartile, the median, the third quartile, and the largest data
-# value.
+# [The] five-number summary consists of the smallest data value, the first
+# quartile, the median, the third quartile, and the largest data value.
 # A *box plot* is a graphical device based on a five-number summary.
-#
-# ## Aside
-#
-# We don't recommend this recipe is used, because all of the values in the
-# *five-number summary* are included in the `describe()` method of a `DataFrame`.
-#
-# It is included for user who like to be explicit when performing their data anlysis.
 #
 # ## Recipe
 #
@@ -22,14 +14,12 @@
 # %%
 import pandas as pd
 from scipy import stats as st
-import statsmodels.api as sm
-from matplotlib import pyplot as plt
 
 # %% [markdown]
 # Get things ready.
 
 # %%
-X: pd.Series = sm.datasets.get_rdataset("Bwages", "Ecdat").data["wage"]
+X = pd.Series(st.norm(170, 10).rvs(150, random_state=20230801), name="height")
 
 # %% [markdown]
 # Return the five-number summary.
@@ -45,3 +35,13 @@ pd.Series(
     },
     name="five-number summary",
 )
+
+# %% [markdown]
+# ## Aside
+#
+# We don't recommend this recipe is used, because all of the values in
+# the *five-number summary* are included in the `describe()` method of
+# a `DataFrame`.
+#
+# It is included for user who like to be explicit when performing their
+# data anlysis.
