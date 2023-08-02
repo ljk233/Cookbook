@@ -13,13 +13,12 @@
 # %%
 import pandas as pd
 from scipy import stats as st
-import statsmodels.api as sm
 
 # %% [markdown]
 # Get things ready.
 
 # %%
-X: pd.Series = sm.datasets.get_rdataset("Bwages", "Ecdat").data["wage"]
+X = pd.Series(st.norm(170, 10).rvs(150, random_state=20230801), name="height")
 
 # %% [markdown]
 # Return the sample *z*-scores.

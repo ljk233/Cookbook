@@ -10,14 +10,14 @@
 # Load the dependencies.
 
 # %%
+from random import choices
 import pandas as pd
-import statsmodels.api as sm
 
 # %% [markdown]
 # Get things ready.
 
 # %%
-X: pd.Series = sm.datasets.get_rdataset("SwissLabor", "AER").data["oldkids"]
+X = pd.Series(choices(["fail", "pass", "merit", "distinction"], k=40), name="grade")
 
 # %% [markdown]
 # Return the sample mode.

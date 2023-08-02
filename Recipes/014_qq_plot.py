@@ -21,7 +21,7 @@ from matplotlib import pyplot as plt
 # Get things ready.
 
 # %%
-X: pd.Series = sm.datasets.get_rdataset("Bwages", "Ecdat").data["wage"]
+X = pd.Series(st.norm(170, 10).rvs(150, random_state=20230801), name="height")
 
 # %% [markdown]
 # Plot the Q-Q plot.
