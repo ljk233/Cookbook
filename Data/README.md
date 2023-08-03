@@ -4,73 +4,141 @@
 ## darwin
 
 ```toml
-description="Paired data corresponding to the final height of corn data (Zea Mays)"
-source="The Design of Experiments, 3rd edn, London, Oliver and Boyd, p. 27."
+summary = "Paired data corresponding to the final height of corn data (Zea Mays)"
+source = "The Design of Experiments, 3rd edn, London, Oliver and Boyd, p. 27."
 [schema]
     [schema.cross]
-        description="Height of cross-fertilised parent"
-        unit="inches"
-        dtype="Real"
+    description = "Height of cross-fertilised parent"
+    unit = "Inch"
+    dtype = "Real"
     [schema.self]
-        description="Height of self-fertilised parent"
-        unit="inches"
-        dtype="Real"
+    description = "Height of self-fertilised parent"
+    unit = "Inch"
+    dtype = "Real"
 ```
 
 ## distance
 
-```
-description=Distances between twenty pairs of locations in Sheffield
-source=Unattributed
-schema:
-    road    REAL    Distance by road (mi)
-    map     REAL    Distance by map (straight-line) (mi)
+```toml
+summary = "Distances between pairs of locations in Sheffield"
+source = "Unattributed"
+[schema]
+    [schema.road]
+    description = "Distance by road"
+    unit = "Mile"
+    dtype = "Real"
+    [schema.map]
+    description = "Straight-line distance by map"
+    unit = "Mile"
+    dtype = "Real"
 ```
 
 ## practicaltest
 
-```
-description=Percentage pass rates for 316 UK driving practical test centres (APR-2014 to MAR-2015)
-source=UK Government
-schema:
-    centre  TEST    Test centre's name
-    male    REAL    Male pass rate
-    female  REAL    Female pass rate
-    total   REAL    Total pass rate
-```
-
-## royaldeaths
-
-```
-description=Month of death of 82 descendants of Queen Victoria
-source=Andrews, D. and Herzberg, A. (1985) Data, New York, Springer, p. 429
-schema:
-    month       INTEGER Month of death (January=1)
-    n_deaths    INTEGER Number of deaths
-```
-
-## schoolgirls
-
-```
-description=Heights and weights of 30 eleven-year-old schoolgirls from Bradford. 
-source=A.T. Graham, Open University
-schema:
-    height  INTEGER Height of participant (cm)
-    weight  INTEGER Weight of participant (kg)
+```toml
+summary = """Percentage pass rates for 316 UK driving practical test centres,
+APR-2014 to MAR-2015
+"""
+source = "UK Government"
+[schema]
+    [schema.centre]
+    description = "Test centre's name"
+    unit = None
+    dtype = "Text"
+    [schema.male]
+    description = "Male pass rate"
+    unit = None
+    dtype = "Real"
+    [schema.female]
+    description = "Female pass rate"
+    unit = None
+    dtype = "Real"
+    [schema.total]
+    description = "Total pass rate"
+    unit = None
+    dtype = "Real"
 ```
 
-## skulls
-
-```
-description=Maximum head breadth of 84 Etruscan males and on 70 skulls of modern Italian males 
-source=A.T. Graham, Open University
-schema:
-    skull   TEXT    Skull owner (Etruscan or Italian)
-    breadth REAL    Maximum breath of skull (mm)
-```
-
-## tattoos
+## royaldeath
 
 ```toml
-description="Clinical data from 55 patients who had forearm tattoos removed"
+summary = "Month of death of 82 descendants of Queen Victoria"
+source = "Andrews, D. and Herzberg, A. (1985) Data, New York, Springer, p. 429"
+[schema]
+    [schema.month]
+    description = "Month of death (1=January, 12=December)"
+    unit = None
+    dtype = "Integer"
+    [schema.n_deaths]
+    description = "Number of deaths"
+    unit = None
+    dtype = "Integer"
+```
+
+## schoolgirl
+
+```toml
+
+summary = "Heights and weights of 30 eleven-year-old schoolgirls from Bradford."
+source = "A.T. Graham, Open University"
+[schema]
+    [schema.height]
+    description = "Participant's height"
+    unit = "Centimetre"
+    dtype = "Integer"
+    [schema.weight]
+    description = "Participant's weight"
+    unit = "Kilogram"
+    dtype = "Integer"
+```
+
+## skull
+
+```toml
+summary = """Maximum head breadth of 84 Etruscan males and on 70 skulls of modern
+Italian males 
+"""
+source = """Barnicot, N.A. and Brothwell, D.R. (1959) ‘The evaluation of metrical
+data in the comparison of ancient and modern bones’, in Wolstenholme, G.E.W. and
+O’Connor, C.M. (eds) Medical Biology and Etruscan Origins, Boston, Little, Brown & Co.
+"""
+[schema]
+    [schema.skull]
+    description = "Skull owner ('Etruscan', 'Italian')"
+    unit = None
+    dtype = "Text"
+    [schema.breadth]
+    description = "Maximum breath of skull"
+    unit = "Millimetre"
+    dtype = "Real"
+```
+
+## tattoo
+
+```toml
+summary = "Clinical data from 55 patients who had forearm tattoos removed"
+source = """Lunn, A.D. and McNeil, D.R. (1988) The SPIDA Manual, Statistical
+Computing Laboratory, Sydney
+"""
+[schema]
+    [schema.method]
+    description = "Removal method ('A', 'B')"
+    unit = None
+    dtype = "Text"
+    [schema.gender]
+    description = "Participant's gender ('m', 'f')"
+    unit = None
+    dtype = "Text"
+    [schema.size]
+    description = "Tattoo size ('large', 'med', 'small')"
+    unit = None
+    dtype = "Text"
+    [schema.depth]
+    description = "Tattoo's depth ('deep', 'mod')"
+    unit = None
+    dtype = "Text"
+    [schema.score]
+    description = "Success rating (Likert scale) (1=poor, 4=excellent)"
+    unit = None
+    dtype = "Integer"
 ```
