@@ -43,19 +43,19 @@ source = "UK Government"
 [schema]
     [schema.centre]
     description = "Test centre's name"
-    unit = None
+    unit = "Null"
     dtype = "Text"
     [schema.male]
     description = "Male pass rate"
-    unit = None
+    unit = "Null"
     dtype = "Real"
     [schema.female]
     description = "Female pass rate"
-    unit = None
+    unit = "Null"
     dtype = "Real"
     [schema.total]
     description = "Total pass rate"
-    unit = None
+    unit = "Null"
     dtype = "Real"
 ```
 
@@ -67,11 +67,11 @@ source = "Andrews, D. and Herzberg, A. (1985) Data, New York, Springer, p. 429"
 [schema]
     [schema.month]
     description = "Month of death (1=January, 12=December)"
-    unit = None
+    unit = "Null"
     dtype = "Integer"
     [schema.n_deaths]
     description = "Number of deaths"
-    unit = None
+    unit = "Null"
     dtype = "Integer"
 ```
 
@@ -105,7 +105,7 @@ O’Connor, C.M. (eds) Medical Biology and Etruscan Origins, Boston, Little, Bro
 [schema]
     [schema.skull]
     description = "Skull owner ('Etruscan', 'Italian')"
-    unit = None
+    unit = "Null"
     dtype = "Text"
     [schema.breadth]
     description = "Maximum breath of skull"
@@ -123,22 +123,22 @@ Computing Laboratory, Sydney
 [schema]
     [schema.method]
     description = "Removal method ('A', 'B')"
-    unit = None
+    unit = "Null"
     dtype = "Text"
     [schema.gender]
     description = "Participant's gender ('m', 'f')"
-    unit = None
+    unit = "Null"
     dtype = "Text"
     [schema.size]
     description = "Tattoo size ('large', 'med', 'small')"
-    unit = None
+    unit = "Null"
     dtype = "Text"
     [schema.depth]
     description = "Tattoo's depth ('deep', 'mod')"
-    unit = None
+    unit = "Null"
     dtype = "Text"
     [schema.score]
     description = "Success rating (Likert scale) (1=poor, 4=excellent)"
-    unit = None
+    unit = "Null"
     dtype = "Integer"
 ```
