@@ -1,13 +1,18 @@
 
 # Range
 
-#Dispersion
+*2023-08-03*
 
 ## Theory
 
-The **range** is the difference between the highest and lowest observed values.
+The **range**:
 
-## Recipe
+- is a measure of dispersion for numeric data
+- is the difference between the highest and lowest observed values
+- is sensitive to outliers
+- has the same units as the data
+
+## Examples
 
 Import the dependencies.
 
@@ -16,14 +21,20 @@ import numpy as np
 import pandas as pd
 ```
 
-Load the sample data.
+Load the data.
 
 ```python
-X = pd.read_csv("../data/practicaltest.csv")["female"]
+practical_test = pd.read_parquet("../data/practicaltest.parquet")
 ```
 
-Return the sample range.
+Return the range of the total pass rate.
 
 ```python
-np.ptp(X)
+practical_test["total"].max() - practical_test["total"].min()
+```
+
+Alternatively, we could use *NumPy*.
+
+```python
+np.ptp(practical_test["total"])
 ```

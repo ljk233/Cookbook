@@ -1,14 +1,19 @@
 
 # Median
 
-#CentralTendency 
+*2023-08-03*
 
 ## Theory
 
-The **median** is the value that minimises the sum of absolute deviations.
-It is the *q*-0.5.
+The **median**:
 
-## Recipe
+- is a measure of central tendency for numeric data
+- is the value that minimises the sum of absolute deviations
+- is resistant to outliers
+- is the 50th percentile
+- has the same unit as the data
+
+## Example
 
 Import the dependencies.
 
@@ -16,14 +21,18 @@ Import the dependencies.
 import pandas as pd
 ```
 
-Load the sample data..
+Load the data.
 
 ```python
-X = pd.read_csv("../data/schoolgirl.csv")["height"]
+school_girl = pd.read_parquet("../data/schoolgirl.parquet")
 ```
 
-Return the sample median.
+Return the median height of the school girls.
 
 ```python
-X.median()
+school_girl["height"].median()
 ```
+
+## References
+
+- *Exploring and interpreting data* (M248, 2019)
