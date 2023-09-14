@@ -1,11 +1,11 @@
 
 # *Q-Q* plot
 
-#Position
+*2023-08-04*
 
-## Theory
+## Note
 
-The ***Q-Q* plot**, or *quantile-to-quantile* plot, is a graph that tests the conformity between the empirical distribution and the given theoretical distribution.
+The ***Q-Q* plot**, or *quantile-to-quantile* plot, is a graph that can be used to check the conformity between the empirical distribution and a given theoretical distribution.
 
 ## Recipe
 
@@ -23,8 +23,18 @@ Load the sample data.
 X = pd.read_csv("../data/practicaltest.csv")["female"]
 ```
 
-Plot the *Q-Q* plot.
+Plot a *Q-Q* plot.
 
 ```python
-res = st.probplot(X, plot=plt)
+_ = st.probplot(X, plot=plt)
 ```
+
+Note, the default is to check against the normal distribution.
+A different theoretical distribution can be used by passing an argument for `dist`.
+From the *SciPy* API reference,
+
+> **dist** : *str or stats.distributions instance, optional*
+>
+> - Distribution or distribution function name.
+> - The default is `‘norm’` for a normal probability plot.
+> - Objects that look enough like a stats.distributions instance (i.e. they have a `ppf` method) are also accepted.

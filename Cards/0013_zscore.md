@@ -1,13 +1,18 @@
 
 # *z*-score
 
-#Position
+*2023-08-04*
 
-## Theory
+## Note
 
-The ***z*-score** is the number of standard deviations a value is away from the *sample mean*.
+The ***z*-score**:
 
-## Recipe
+- is a measure of position
+- measures the number of standard deviations an observation falls above or below the mean
+- is a method of standardisation
+- is scale-free
+
+## Example
 
 Import the dependencies.
 
@@ -16,14 +21,22 @@ import pandas as pd
 from scipy import stats as st
 ```
 
-Load the sample data.
+Load the data.
 
 ```python
-X = pd.read_csv("../data/practicaltest.csv")["total"]
+school_girl = pd.read_parquet("../data/schoolgirl.parquet")
 ```
 
-Return sample deciles.
+Return the *z*-score for each height.
 
-```python
-pd.Series(st.zscore(X), name="zscore")
+```{python}
+st.zscore(school_girl["weight"], ddof=1).rename("z_weight")
 ```
+
+Note, we pass `ddof=1` so the sample standard deviation is used, rather than the population standard deviation.
+
+## References
+
+- *Multivariate analysis* (M249, 2007)
+  - I could not find a nice reference for the *z*-score in M248
+  - This is not to say it is not addressed there, but it is not obvious
