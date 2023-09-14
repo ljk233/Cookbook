@@ -20,7 +20,7 @@ from matplotlib import pyplot as plt
 Load the sample data.
 
 ```python
-X = pd.read_csv("../data/practicaltest.csv")["female"]
+X = pd.read_parquet("../data/practicaltest.parquet")["female"]
 ```
 
 Plot a *Q-Q* plot.
