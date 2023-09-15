@@ -43,6 +43,7 @@ practical_test = pd.read_parquet("../data/practicaltest.parquet")
 
 The hypotheses are,
 
+&ensp;&ensp;&ensp;&ensp;
 H<sub>0</sub> : μ = 50%;
 H<sub>1</sub> : μ ≠ 50%,
 
@@ -68,6 +69,7 @@ Studies have found that the meanheight of 11 year-old girls is 144cm.
 
 The hypotheses are,
 
+&ensp;&ensp;&ensp;&ensp;
 H<sub>0</sub> : μ<sup>\*</sup> = 144cm;
 H<sub>1</sub> : μ<sup>\*</sup> > 144cm,
 
