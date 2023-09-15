@@ -51,7 +51,7 @@ Alternatively, we can use *SciPy*.
 st.norm.interval(0.95, X.mean(), st.sem(X))
 ```
 
-### Small samples
+### Exact
 
 Load the data.
 

@@ -19,6 +19,7 @@ import statsmodels.api as sm
 ```
 
 At the 2022 FIFA World Cup, there were 172 goals scored in 64 matches, for an average of 2.69 goals per match.
+
 Return an approximate 95%-confidence interval for the total number of goals scored per game.
 
 ```python

@@ -1,6 +1,8 @@
 
 # Pooled sample variance
 
+*2023-09-15*
+
 ## Notes
 
 *[Confidence Interval for Two Independent Samples, Continuous Outcome](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_confidence_intervals/BS704_Confidence_Intervals5.html#headingtaglink_1)* (Boston University School of Public Health, 2017)
