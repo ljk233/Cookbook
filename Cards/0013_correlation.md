@@ -5,7 +5,7 @@
 
 ## Notes
 
-The **Pearson correlation coefficient** *r* :
+The **Pearson correlation coefficient *r***:
 
 - is a measure of the strength and direction of a linear association between two quantitative variables
   - The sign indicates the direction, and the magnitude the strength
