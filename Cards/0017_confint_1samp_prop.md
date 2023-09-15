@@ -18,7 +18,7 @@ import statsmodels.api as sm
 ```
 
 A candidate in a two-person election commissions a poll to determine who is ahead.
-The pollster randomly chooses 500 registered voters, and determines that 260 out of the 500 favor the candidate.
+The pollster randomly chooses 500 registered voters, and determines that 260 out of the 500 favour the candidate.
 
 Return an approximate 95%-confidence interval for the proportion of voters who back the candidate.
 
