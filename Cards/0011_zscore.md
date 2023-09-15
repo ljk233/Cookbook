@@ -3,7 +3,7 @@
 
 *2023-08-04*
 
-## Note
+## Notes
 
 The ***z*-score**:
 

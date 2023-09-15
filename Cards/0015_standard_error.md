@@ -3,7 +3,7 @@
 
 *2023-09-14*
 
-## Note
+## Notes
 
 The **estimated standard error of the mean**:
 

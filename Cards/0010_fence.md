@@ -3,7 +3,7 @@
 
 *2023-08-04*
 
-## Note
+## Notes
 
 The upper and lower **fences** represent the cut-off values for upper and lower outliers.
 

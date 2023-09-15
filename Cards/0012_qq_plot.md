@@ -3,7 +3,7 @@
 
 *2023-08-04*
 
-## Note
+## Notes
 
 The ***Q-Q* plot**, or *quantile-to-quantile* plot, is a graph that can be used to check the conformity between the empirical distribution and a given theoretical distribution.
 

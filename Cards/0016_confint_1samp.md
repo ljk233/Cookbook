@@ -1,5 +1,5 @@
 
-# One sample confidence interval of the mean
+# One sample confidence interval for the mean
 
 *2023-09-14*
 
