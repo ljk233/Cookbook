@@ -22,6 +22,7 @@ A survey of 150 adults aged 25-34 found that 32 out of the 86 males questioned a
 
 The hypotheses are,
 
+&ensp;&ensp;&ensp;&ensp;
 H<sub>0</sub> : *p*<sub>M</sub> = *p*<sub>F</sub>;
 H<sub>1</sub> : *p*<sub>M</sub> ≠ *p*<sub>F</sub>,
 

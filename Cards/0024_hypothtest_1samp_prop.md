@@ -22,6 +22,7 @@ The pollster randomly chooses 500 registered voters, and determines that 260 out
 
 The hypotheses are,
 
+&ensp;&ensp;&ensp;&ensp;
 H<sub>0</sub> : p = 0.5;
 H<sub>1</sub> : p > 0.5,
 

@@ -28,6 +28,7 @@ darwin = pd.read_parquet("../data/darwin.parquet")
 
 The hypotheses are,
 
+&ensp;&ensp;&ensp;&ensp;
 H<sub>0</sub> : μ<sub>D</sub> = 0;
 H<sub>1</sub> : μ<sub>D</sub> ≠ 0,
 

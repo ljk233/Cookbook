@@ -45,6 +45,7 @@ practical_test = pd.read_parquet("../Data/practicaltest.parquet")
 
 The hypotheses are,
 
+&ensp;&ensp;&ensp;&ensp;
 H<sub>0</sub> : μ<sub>M</sub> = μ<sub>F</sub>;
 H<sub>1</sub> : μ<sub>M</sub> ≠ μ<sub>F</sub>,
 
@@ -67,6 +68,7 @@ skull = pd.read_parquet("../Data/skull.parquet")
 
 The hypotheses are,
 
+&ensp;&ensp;&ensp;&ensp;
 H<sub>0</sub> : μ<sub>Etr</sub> = μ<sub>Ita</sub>;
 H<sub>1</sub> : μ<sub>Etr</sub> ≠ μ<sub>Ita</sub>,
 
