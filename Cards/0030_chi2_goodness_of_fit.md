@@ -25,7 +25,7 @@ import pandas as pd
 from scipy import stats as st
 ```
 
-The month of death of 82 descendents of Queen Victoria who died of natural causes has been collected.
+The month of death of 82 descendents of Queen Victoria who died of natural causes were collected.
 
 We will test the null hypothesis that a discrete uniform distribution is an adequate model for the data.
 
