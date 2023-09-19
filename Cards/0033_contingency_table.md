@@ -2,9 +2,9 @@
 
 *2023-09-18*
 
-Add note.
+A cheatsheet for analysing a 2x2 contingency table.
 
-## Examples
+## Example
 
 Import the dependencies.
 
@@ -62,14 +62,18 @@ pd.Series(
 
 Return the result of a chi-square test for no association.
 
-Note, `Table2x2` does have a method for this, but it returns a `Bunch`, a rather niche object that needs to be printed to the standard output.
+Note, `Table2x2` does have a method for this, but it returns a `Bunch`, a rather odd object that needs to be printed to the standard output.
 
 ```python
 st.chi2_contingency(xtab, correction=False)
 ```
 
-Return the result Fisher’s exact test.
+Return the result of Fisher’s exact test.
 
 ```python
 st.fisher_exact(xtab)
 ```
+
+## References
+
+- *Medical statistics* (M249, 2007)
