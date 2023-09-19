@@ -78,7 +78,7 @@ result.tvalues.rename("t").to_frame().assign(pval=result.pvalues).round(4)
 
 ### Check the model assumptions
 
-Residual plot showing residual against fitted value.
+Plot the residual against fitted values.
 
 ```python
 plt.scatter(result.fittedvalues, result.resid)
@@ -87,7 +87,7 @@ plt.ylabel("Residual")
 plt.xlabel("Fitted value")
 ```
 
-Normal probability plot using the residual values.
+Plot a normal probability plot for the fitted values.
 
 ```python
 _ = st.probplot(result.resid, plot=plt)

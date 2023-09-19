@@ -190,7 +190,7 @@ Plot a scatterplot matrix.
 sns.pairplot(peru, height=1.5, corner=True)
 ```
 
-Output the correlation matrix.
+Return the correlation matrix.
 
 ```python
 peru.corr()
