@@ -17,15 +17,23 @@ from statsmodels.stats import api as sm
 Load the data.
 
 ```python
-survey = pd.read_parquet("../Data/survey.parquet").dropna(
-    subset=["writing_hand", "arm_fold"]
-).query("arm_fold != 'Neither'")
+survey = (
+    pd.read_parquet("../Data/survey.parquet")
+    .dropna(subset=["writing_hand", "arm_fold"])
+    .query("arm_fold != 'Neither'")
+)
 ```
 
-Cross-tabulate the data.
+Cross tabulate the data.
 
 ```python
 xtab = pd.crosstab(survey["writing_hand"], survey["arm_fold"]).to_numpy()
+```
+
+Alternatively, we could use *SciPy* to cross tabulate the data.
+
+```python
+st.contingency.crosstab(survey["writing_hand"], survey["arm_fold"])
 ```
 
 Initialise a 2x2 contingency table.
