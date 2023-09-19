@@ -27,31 +27,7 @@ sns.set_theme()
 Load the data.
 
 ```python
-cholestero_ = pd.read_parquet("../data/cholesterol.parquet")
-```
-
-Check the data...
-
-```python
-d = pd.DataFrame(
-    [
-        [1.9, 20],
-        [2.1, 22],
-        [2.5, 22],
-        [2.5, 24],
-        [3.0, 25],
-        [2.3, 28],
-        [2.9, 28],
-        [3.3, 29],
-        [2.6, 30],
-        [3.0, 33],
-        [3.2, 34],
-        [3.8, 36],
-        [3.2, 40],
-    ],
-    columns=["cholesterol", "age"]
-)
-cholesterol = pd.concat([cholestero_, d], ignore_index=True)
+cholesterol = pd.read_parquet("../data/cholesterol.parquet")
 ```
 
 ### Pre-fitting
@@ -119,8 +95,13 @@ _ = st.probplot(result.resid, plot=plt)
 
 ### Prediction
 
-Retun a point and prediction interval.
+Return a point and prediction interval.
 
 ```python
-result.get_prediction({"age": 35}).summary_frame(0.1)
+result.get_prediction({"age": 35}).summary_frame()
 ```
+
+## References
+
+- *Regression* (M248, 2019)
+- *Introduction to statistical modelling and R* (M348, 2022)
