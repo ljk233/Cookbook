@@ -33,7 +33,8 @@ peru = pd.read_csv("../Data/peru.txt", sep="\t")
 Model and fit the data.
 The model is,
 
-    Systol ~ Age + Years + Weight + Height + Chin + Forearm + Calf + Pulse + Diastol
+&ensp;&ensp;&ensp;&ensp;
+`Systol ~ Age + Years + Weight + Height + Chin + Forearm + Calf + Pulse + Diastol`
 
 ```python
 resp = peru["Systol"]
