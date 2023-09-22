@@ -3,7 +3,7 @@
 
 *2023-09-21*
 
-A cheat sheet for performing dimension reduction using principal component analysis.
+A cheat sheet for performing dimension reduction using a principal component analysis.
 
 ## Main
 
@@ -12,7 +12,6 @@ Import the dependencies.
 ```python
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
-# from sklearn.model_selection import train_test_split
 from sklearn.decomposition import PCA
 from sklearn import datasets
 import seaborn as sns
@@ -30,28 +29,6 @@ Load the data.
 ```python
 X, _ = datasets.load_iris(return_X_y=True, as_frame=True)
 ```
-
-### Prepare the data
-
-Replace numerical targets with labels.
-
-<!-- #raw -->
-y_ = y.map(lambda d: {0: "setosa", 1: "versicolor", 2: "virginica"}[d])
-<!-- #endraw -->
-
-Split the data into test and train.
-
-<!-- #raw -->
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y_, test_size=0.15, random_state=21
-)
-<!-- #endraw -->
-
-Merge *X_train*, *y_train* for exploratory data analysis.
-
-<!-- #raw -->
-iris_train = X_train.assign(target=y_train)
-<!-- #endraw -->
 
 ### Exploratory data analysis
 
@@ -91,14 +68,14 @@ Standardise the data.
 
 ```python
 standard_scaler = StandardScaler()
-Z = standard_scaler.fit_transform(X)
+Z_arr = standard_scaler.fit_transform(X)
 ```
 
 Model and fit the data.
 
 ```python
 pca_model = PCA()
-result = pca_model.fit_transform(Z)
+Z_fit_arr = pca_model.fit_transform(Z_arr)
 ```
 
 Return the variance explained by each principal component.
@@ -109,7 +86,7 @@ pd.DataFrame(
         "VE": pca_model.explained_variance_,
         "PVE": pca_model.explained_variance_ratio_ * 100
     },
-    index=pd.RangeIndex(1, 5, name="PC")
+    index=[f"PC{k}" for k in range(1, pca_model.n_components_ + 1)]
 ).assign(CPVE=lambda x: x['PVE'].cumsum())
 ```
 
@@ -118,16 +95,28 @@ Return the loadings.
 ```python
 pd.DataFrame(
     pca_model.components_,
-    columns=X.columns,
-    index=pd.RangeIndex(1, 5, name="PC")
+    index=X.columns,
+    columns=[f"PC{k}" for k in range(1, pca_model.n_components_ + 1)]
 )
 ```
 
 Plot a scree plot of the principal component against total variance explained.
 
 ```python
-plt.plot(range(1, 5), pca_model.explained_variance_, "o-")
+plt.plot(
+    [f"PC{k}" for k in range(1, pca_model.n_components_ + 1)],
+    pca_model.explained_variance_,
+    "o-"
+)
 plt.title('Scree Plot')
 plt.xlabel('Principal Component')
 plt.ylabel('Variance Explained')
+```
+
+Return the transformed data as a `DataFrame`.
+
+```python
+Z_fit = pd.DataFrame(
+    data=Z_fit_arr, columns=[f"PC{k}" for k in range(1, pca_model.n_components_ + 1)]
+)
 ```
